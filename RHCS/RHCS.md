@@ -199,6 +199,8 @@ pki_client_database_password=password
 ```
 If you are installing a TPS:
 
+The config file is different, read the man pkispawn page for all the configs.
+
 Add the following section with the following section:
 ```
 [TPS]
@@ -220,3 +222,17 @@ After you have customized the configuration files according to https://access.re
 pkispawn -f /root/config.txt -s subsystem --skip-installation
 ```
 Replace subsystem with one of the following subsystems: CA, KRA, OCSP, TKS, or TPS.
+### Post-Installation
+
+**TLS Cipher Configuration**
+
+https://access.redhat.com/documentation/en-us/red_hat_certificate_system/10/html/planning_installation_and_deployment_guide/web-services-configuration-files#configuring-ciphers
+
+**Enabling Certificate Revocation Checking for Subsystems**
+
+https://access.redhat.com/documentation/en-us/red_hat_certificate_system/10/html/planning_installation_and_deployment_guide/web-services-configuration-files#enabling-ocsp-checking-for-the-tks-and-kra
+
+**Enabling Signed Audit Logging**
+
+https://access.redhat.com/documentation/en-us/red_hat_certificate_system/10/html/planning_installation_and_deployment_guide/Configuring_Logs_in_the_CS.cfg_File#enabling_and_configuring_signed_audit_logs
+
