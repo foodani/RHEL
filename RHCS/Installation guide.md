@@ -1,4 +1,4 @@
-# RHCS
+# Installation guide
 
 ## Prerequisites
 
