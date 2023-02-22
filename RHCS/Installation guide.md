@@ -260,6 +260,9 @@ Replace subsystem with one of the following subsystems: CA, KRA, OCSP, TKS, or T
 
 **TLS Cipher Configuration**
 
+The configuration for server TLS ciphers is in the Red Hat Certificate System instance-specific /var/lib/pki/instance_name/conf/server.xml file.
+Add the following at the Connector "Secure" line:
+
 https://access.redhat.com/documentation/en-us/red_hat_certificate_system/10/html/planning_installation_and_deployment_guide/web-services-configuration-files#configuring-ciphers
 
 **Enabling Certificate Revocation Checking for Subsystems**
