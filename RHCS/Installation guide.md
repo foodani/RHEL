@@ -142,6 +142,7 @@ If you use a self-signed certificate in Directory Server use the following comma
 certutil -L -d /etc/dirsrv/slapd-instance_name/ -n "server-cert" -a -o /root/ds.crt
 ```
 **CA Settings**
+
 To increase security, enable random serial numbers by adding the [CA] section with the following setting to the configuration file:
 ```
 [CA]
@@ -191,6 +192,39 @@ Add the following parameters to the [CA] section to override the RSA profiles wi
 pki_source_admincert_profile=/usr/share/pki/ca/conf/eccAdminCert.profile
 pki_source_servercert_profile=/usr/share/pki/ca/conf/eccServerCert.profile
 pki_source_subsystemcert_profile=/usr/share/pki/ca/conf/eccSubsystemCert.profile
+```
+
+Sample configuration:
+```
+[DEFAULT]
+pki_server_database_password=Secret.123
+
+[CA]
+pki_admin_email=caadmin@example.com
+pki_admin_name=caadmin
+pki_admin_nickname=caadmin
+pki_admin_password=Secret.123
+pki_admin_uid=caadmin
+
+pki_client_pkcs12_password=Secret.123
+
+pki_ds_hostname=pki.example.com
+pki_ds_ldaps_port=636
+pki_ds_secure_connection=True
+pki_ds_secure_connection_ca_nickname=ds_signing
+pki_ds_secure_connection_ca_pem_file=ds_signing.crt
+
+pki_ds_base_dn=dc=ca,dc=pki,dc=example,dc=com
+pki_ds_database=ca
+pki_ds_password=Secret.123
+
+pki_security_domain_name=EXAMPLE
+
+pki_ca_signing_nickname=ca_signing
+pki_ocsp_signing_nickname=ca_ocsp_signing
+pki_audit_signing_nickname=ca_audit_signing
+pki_sslserver_nickname=sslserver
+pki_subsystem_nickname=subsystem
 ```
 **Settings for Other Subsystems**
 You need the following settings to install a subordinate CA, KRA, OCSP, TKS, or TPS:
