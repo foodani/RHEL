@@ -273,3 +273,5 @@ https://access.redhat.com/documentation/en-us/red_hat_certificate_system/10/html
 
 https://access.redhat.com/documentation/en-us/red_hat_certificate_system/10/html/planning_installation_and_deployment_guide/Configuring_Logs_in_the_CS.cfg_File#enabling_and_configuring_signed_audit_logs
 
+**Import Admin Certificate**
+
