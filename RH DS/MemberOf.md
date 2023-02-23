@@ -49,7 +49,7 @@ dsconf -D "cn=Directory Manager" ldap://server.example.com plugin memberof show
 ...
 memberofattr: 
 ...
-
+```
 Configure the MemberOf plug-in to add the customMemberOf attribute to user entries:
 
 ```
