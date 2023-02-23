@@ -10,6 +10,7 @@ Enable the plugin
 dsconf -D "cn=Directory Manager" ldap://server.example.com plugin memberof enable
 dsctl instance_name restart
 ```
+**Group Attribute**
 
 To retrieve members of a group from a different attribute than member, which is the default, set the memberOfGroupAttr parameter to the respective attribute name.
 
@@ -37,6 +38,8 @@ To set multiple attributes, pass them all to the --groupattr parameter. For exam
 ```
 dsconf -D "cn=Directory Manager" ldap://server.example.com plugin memberof set --groupattr member uniqueMember ...
 ```
+
+**User Attribute**
 
 By default, the MemberOf plug-in adds the memberOf attribute to user entries. To use a different attribute, set the name of the attribute in the memberOfAttr parameter.
 
